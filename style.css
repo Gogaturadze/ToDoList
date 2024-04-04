@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #212121;
+}
+
+.cont-box {
+  max-width: 500px;
+  width: 100%;
+  min-height: 400px;
+  margin: 230px auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+}
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: aliceblue;
+}
+.cont-box > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.list-div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.list-div > p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  position: relative;
+  font-size: 17px;
+  color: #f5f5f5;
+}
+
+/* input */
+.input-txt {
+  width: 80%;
+  background-color: #f5f5f5;
+  color: #171515;
+  padding: 0.15rem 0.5rem;
+  min-height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+.input-txt:focus {
+  border-bottom: 2px solid #5b5fc7;
+  border-radius: 4px 4px 2px 2px;
+}
+
+.input-txt:hover {
+  outline: 1px solid lightgrey;
+}
+/* btn */
+.btn-add {
+  border: 2px solid #24b4fb;
+  background-color: #24b4fb;
+  border-radius: 0.9em;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.4s;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-add span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-add:hover {
+  /* background-color: #0071e2; */
+  border: 2px solid #edeeee;
+}
+
+/* close btn */
+.list-div > p > button {
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  background: #fb0000;
+  display: block;
+  z-index: 200;
+  text-indent: -9999px;
+  position: relative;
+  border-style: none;
+  cursor: pointer;
+}
+.list-div > p > button:before,
+.list-div > p > button:after {
+  content: "";
+  width: 55%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 48%;
+  left: 22%;
+
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-out;
+}
+.list-div > p > button:after {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-out;
+}
+.list-div > p > button:hover:before,
+.list-div > p > button:hover:after {
+  transform: rotate(180deg);
+}
